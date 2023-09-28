@@ -1,4 +1,5 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { defineCustomElement } from 'vue'
+import chat from './chat-widget.ce.vue'
 
-createApp(App).mount('#app')
+const element = defineCustomElement(chat);
+customElements.define("chat-widget", element);
